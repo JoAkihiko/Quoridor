@@ -295,54 +295,11 @@ public class GameController : MonoBehaviour
             if (candidatePiece == COLOR.GREEN)
             {
                 JumpOver(orangePosition, candidatePosition, direction);
-                /*
-                int[] position = new int[] { candidatePosition[0] * 2 - orangePosition[0], candidatePosition[1] * 2 - orangePosition[1] };
-                if(position[0] >=0 && position[0] < HEIGHT && position[1] >= 0 && position[1] < WIDTH)
-                {
-                    if ((direction != DIRECTION.UP || IsDown(position[0], position[1])) && (direction != DIRECTION.DOWN || IsUp(position[0], position[1])) && (direction != DIRECTION.LEFT || IsRight(position[0], position[1])) && (direction != DIRECTION.RIGHT || IsLeft(position[0], position[1])))
-                    {
-                        // 緑を超えた位置が候補地
-                        board[position[0], position[1]] = COLOR.CANDIDATE;
-                    }
-                    if(direction == DIRECTION.UP)
-                    {
-                        if(IsDown(position[0], position[1]))
-                        {
-                            // 緑を超えた位置が候補地
-                            board[position[0], position[1]] = COLOR.CANDIDATE;
-                        }
-                        else
-                        {
-                            if(IsLeft(candidatePosition[0], candidatePosition[1]))
-                            {
-                                // 相手プレイヤーの隣が候補地
-                                board[candidatePosition[0], candidatePosition[1] - 1] = COLOR.CANDIDATE;
-                            }
-                            if (IsRight(candidatePosition[0], candidatePosition[1]))
-                            {
-                                // 相手プレイヤーの隣が候補地
-                                board[candidatePosition[0], candidatePosition[1] + 1] = COLOR.CANDIDATE;
-                            }
-                        }
-                    }
-                }
-            */
             }
             // 候補地に橙プレイヤーがいたとき
             else if (candidatePiece == COLOR.ORANGE)
             {
                 JumpOver(greenPosition, candidatePosition, direction);
-                /*
-                int[] position = new int[] { candidatePosition[0] * 2 - greenPosition[0], candidatePosition[1] * 2 - greenPosition[1] };
-                if (position[0] >= 0 && position[0] < HEIGHT && position[1] >= 0 && position[1] < WIDTH)
-                {
-                    if ((direction != DIRECTION.UP || IsDown(position[0], position[1])) && (direction != DIRECTION.DOWN || IsUp(position[0], position[1])) && (direction != DIRECTION.LEFT || IsRight(position[0], position[1])) && (direction != DIRECTION.RIGHT || IsLeft(position[0], position[1])))
-                    {
-                        // 橙を超えた位置が候補地
-                        board[position[0], position[1]] = COLOR.CANDIDATE;
-                    }
-                }
-                */
             } 
             else
             {
