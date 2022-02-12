@@ -20,4 +20,4 @@ OS：Windows10 64bit
 ## そのほか
 Unityで動作するために必要なファイル
 
-ソースコードを確認される場合は"/Assets/Scripts"にあります。
+ソースコードを確認される場合は"Assets/Scripts/"内にあります。
